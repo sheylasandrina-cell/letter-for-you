@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To My Love 💗</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe9f3;
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .lock-screen, .letter-container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .lock-screen.active, .letter-container.active {
+      display: flex;
+    }
+
+    .heart-button {
+      background-color: #ff99c8;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 50%;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      shape-outside: circle();
+      transition: transform 0.2s ease;
+    }
+
+    .heart-button:hover {
+      transform: scale(1.1);
+    }
+
+    input {
+      padding: 10px;
+      border: 2px solid #ffb6d9;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #e2558c;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      background: #fff0f6;
+      padding: 40px;
+      max-width: 800px;
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255, 174, 201, 0.4);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+
+    .hearts {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .gif img {
+      width: 160px;
+      margin: 20px 0;
+      border-radius: 15px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .music {
+      margin-top: 20px;
+    }
+
+    .music a {
+      color: #d6336c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #b07c99;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+
+  
+</head>
+<body>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  
+
+
+
+  <!-- 🔒 Lock Screen -->
+  <div class="lock-screen active" id="lockScreen">
+    <h1>🔐 Enter the Secret Code</h1>
+    <input type="password" id="codeInput" placeholder="Enter code..." />
+    <button class="heart-button" onclick="checkCode()">❤️</button>
+    <p id="error" style="color: red; display: none;">Wrong code, try again!</p>
+  </div>
+
+  <!-- 💌 Love Letter -->
+  <div class="letter-container" id="letterContainer">
+    <div class="container">
+      <h1>To My Love 💕</h1>
+      <div class="hearts">💗💖💘💞</div>
+      <p>
+Even now, even through the silence… I still believe in us.
+
+Not because I’m desperate — but because I feel your love, even when you try to hide it. I know you care for me deeply, even when your heart feels too heavy to show it. And I trust you. I trust the real you — the one who loves quietly, feels deeply, and gets overwhelmed sometimes.
+
+I know I’ve hurt you. I’ve pulled away. I’ve let emotions take control. And maybe without realizing it, I made you feel like you had to stop expecting anything from me… like you had to shut down just to protect yourself.
+
+When you say “do what you want,” I hear the pain behind it. I know it’s not because you don’t care — it’s because you care too much and don’t know how to ask anymore. It’s because you're tired of hoping.
+
+But love… I never stopped choosing you. Not even when things got hard. Not even when I didn’t know how to say it right. You’re still the one I want. Still the one I care for above everything.
+
+You don’t have to be strong all the time. You don’t have to pretend it doesn’t affect you. I’m not here to fight. I’m here to love — more gently, more patiently, more purely than before. I've let go of my pride because your heart means more to me than being “right.”
+
+I think about us a lot — the way we’d say “love” to each other without thinking, the way you made me laugh when I needed it most, and how just being beside you always felt like home. Even when I was tired, even when I had to sleep and you were still awake in the dark… you never left. You copied my patterns, maybe because it was your way of staying close to me, even when I didn’t see it.
+
+You’ve always been there in your own way. And I see that now.
+
+I don’t expect you to fix anything right away. I don’t expect you to open up all at once. I just want you to know — I’m still here. My heart hasn’t changed. I’ll stay soft with you. I’ll stay patient. I’ll stay loving.
+
+If your heart still whispers for us… even just a little… let it speak. I’m listening.
+No pressure. No fear. Just love. Always.
+
+Yours,
+Sheyla 💌
+      </p>
+
+      <div class="gif">
+        <img src="https://media.tenor.com/sH0M3l-KZqMAAAAi/love-couple.gif" alt="Cute couple heart gif">
+      </div>
+
+      <div class="music">
+        🎵 <a href="https://www.youtube.com/watch?v=NdYWuo9OFAw" target="_blank">Play "Iris" by The Goo Goo Dolls</a>
+      </div>
+
+      <footer>Made with all my heart 💗</footer>
+    </div>
+  </div>
+
+  <!-- 🔑 Script -->
+
+  <script>
+    function checkCode() {
+      const input = document.getElementById('codeInput').value;
+      const lock = document.getElementById('lockScreen');
+      const letter = document.getElementById('letterContainer');
+      const error = document.getElementById('error');
+
+      if (input === "06272025") {
+        lock.classList.remove("active");
+        letter.classList.add("active");
+      } else {
+        error.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
